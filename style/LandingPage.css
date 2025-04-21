@@ -1,0 +1,151 @@
+.header-hero {
+  padding: 5rem 0;
+  text-align: center;
+
+  position: relative;
+}
+
+.header-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease;
+}
+
+.header-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  opacity: 0.9;
+  animation: fadeInUp 1s ease 0.2s forwards;
+}
+
+.search-bar {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 0.9rem 1.2rem;
+  border: none;
+  border-radius: 30px 0 0 30px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-bar button {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 0 1.8rem;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-bar button:hover {
+  background-color: #0099cc;
+  transform: scale(1.02);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.explore-card {
+  display: block;
+  text-decoration: none;
+  color: var(--dark-color);
+  transition: var(--transition);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.explore-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.explore-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.explore-card:hover .explore-image {
+  transform: scale(1.05);
+}
+
+.explore-card span {
+  display: block;
+  padding: 1rem;
+  font-weight: 600;
+  text-align: center;
+  background: white;
+}
+
+@media (max-width: 768px) {
+  .header-hero {
+    padding: 3rem 1rem;
+  }
+
+  .header-hero h1 {
+    font-size: 2rem;
+  }
+
+  .header-hero p {
+    font-size: 1rem;
+  }
+
+  .explore-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-hero {
+    padding: 2rem 1rem;
+  }
+
+  .header-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .search-bar input {
+    border-radius: 30px;
+    margin-bottom: 0.5rem;
+  }
+
+  .search-bar button {
+    border-radius: 30px;
+    padding: 0.8rem;
+  }
+}
