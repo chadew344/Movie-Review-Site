@@ -1,0 +1,213 @@
+.movie-detail,
+.tvseries-detail {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.movie-poster-large,
+.series-poster-large {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.movie-content,
+.series-content {
+  padding: 15px;
+}
+
+.movie-title,
+.series-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.movie-meta,
+.series-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 15px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.movie-bio,
+.series-bio {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+  gap: 8px;
+}
+
+.movie-bio span,
+.series-bio span {
+  display: block;
+}
+
+.why-watch {
+  margin: 20px 0;
+}
+
+.reasons-list {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.reasons-list li {
+  padding: 6px 0;
+  line-height: 1.5;
+}
+
+.sub-title {
+  font-size: 1.3rem;
+  margin: 20px 0 10px;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 5px;
+}
+
+.trailer iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.cast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.cast-member {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 5px;
+}
+
+.cast-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.cast-role {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.plot-summary p,
+.review p {
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.trivia-list,
+.reactions-list,
+.awards-list {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.trivia-list li,
+.reactions-list li,
+.awards-list li {
+  padding: 6px 0;
+  line-height: 1.5;
+}
+
+.episode-guide {
+  margin: 25px 0;
+}
+
+.episode-list li {
+  margin-bottom: 8px;
+}
+
+blockquote {
+  font-style: italic;
+  padding: 10px 20px;
+  margin: 15px 0;
+  background: #f9f9f9;
+  border-left: 4px solid var(--primary-color);
+}
+
+.episode-guide {
+  margin: 25px 0;
+}
+
+.episode-list li {
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .movie-detail,
+  .tvseries-detail {
+    grid-template-columns: 300px 1fr;
+    padding: 0;
+  }
+
+  .movie-poster-large,
+  .series-poster-large {
+    margin: 0;
+  }
+
+  .movie-content,
+  .series-content {
+    padding: 30px;
+  }
+
+  .movie-title,
+  .series-poster-title {
+    text-align: left;
+  }
+
+  .movie-meta,
+  .series-poster-meta {
+    justify-content: flex-start;
+  }
+
+  .movie-grid,
+  .series-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .movie-grid,
+  .series-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  .cast-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .movie-detail,
+  .tvseries-detail {
+    grid-template-columns: 350px 1fr;
+  }
+}
