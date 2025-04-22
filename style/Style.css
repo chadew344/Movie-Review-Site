@@ -171,7 +171,6 @@ header {
   border-left: 4px solid var(--secondary-color);
 }
 
-/* Movie Card Styles */
 .movie-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -208,7 +207,7 @@ header {
   padding: 1.2rem;
 }
 
-.movie-title {
+.movie-card-title {
   font-size: 1.1rem;
   margin-bottom: 0.8rem;
   color: var(--primary-color);
